@@ -11,7 +11,8 @@ app.secret_key = 'giuyyugj'  # Cambia esto por una clave secreta segura
 sp_oauth = SpotifyOAuth(
     client_id=SPOTIPY_CLIENT_ID,
     client_secret=SPOTIPY_CLIENT_SECRET,
-    redirect_uri='http://127.0.0.1:5000/callback',
+    ##redirect_uri='http://127.0.0.1:5000/callback',
+    redirect_uri='http://flaskrocola.azurewebsites.net/callback',
     scope='user-modify-playback-state',
 )
 
