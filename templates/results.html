@@ -1,0 +1,33 @@
+<!-- results.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados de la Búsqueda</title>
+</head>
+<body>
+    <h1>Resultados de la Búsqueda</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de la Canción</th>
+                <th>Artista</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for song in songs %}
+            <tr>
+                <td>{{ song.name }}</td>
+                <td>{{ song.artists[0].name }}</td>
+                <td>
+                    <form method="post" action="{{ url_for('enqueue_song') }}">
+                        <input type="hidden" name="song_uri" value="{{ song.uri }}">
+                        <button type="submit">Encolar</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

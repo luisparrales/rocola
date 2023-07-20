@@ -1,0 +1,15 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Canción</title>
+</head>
+<body>
+    <h1>Buscar Canción</h1>
+    <form method="post" action="{{ url_for('search_song') }}">
+        <label for="song_name">Nombre de la Canción:</label>
+        <input type="text" name="song_name" id="song_name">
+        <button type="submit">Buscar</button>
+    </form>
+</body>
+</html>
