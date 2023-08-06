@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0c50f49a-bf9b-45c0-acb1-072516d17b94/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/rocola",
+    "appService.deploySubpath": "."
+}
